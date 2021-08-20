@@ -25,16 +25,24 @@ export default function Layout({ children }) {
         </Head>
         <div className={styles.headRow}>
           <div className={styles.logoContainer}>
-            <div className={styles.logo}>
-              <SvgIcon component={Logo} style={{ fontSize: "6rem" }} />
-            </div>
+            <Link href="/">
+              <div className={styles.logo}>
+                <SvgIcon component={Logo} style={{ fontSize: "6rem" }} />
+              </div>
+            </Link>
             <div className={styles.vl}></div>
-            <span>Danielasman</span>
+            <Link href="/">
+              <span>Danielasman</span>
+            </Link>
           </div>
           <div className={styles.menuContainer}>
             <ul>
-              <li>About</li>
-              <li>Blog</li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
               <li>Contact</li>
             </ul>
           </div>

@@ -57,8 +57,9 @@ export default function Home() {
           <div className={styles.content}>
             <p>
               Neurosurgery is an art and every neurosurgeon is an artist. I am
-              an aspiring medical student who one day wants to be that artist. I
-              want to make it my destiny to master brain: the organ of destiny.
+              an aspiring medical student who one day wants to be that artist! I
+              want to make it my destiny to master brain: "the organ of
+              destiny".
             </p>
             <p>Check out my blog for my latest posts.</p>
           </div>

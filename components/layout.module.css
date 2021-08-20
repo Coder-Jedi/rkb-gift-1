@@ -22,9 +22,11 @@
 .logoContainer {
   display: inline-flex;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 8vw;
 }
 .logoContainer .logo {
+  cursor: pointer;
+  margin-right: 2px;
 }
 .logoContainer .vl {
   border-left: 3px solid rgb(2, 31, 2);
@@ -33,13 +35,14 @@
 }
 .logoContainer span {
   font-family: "Cormorant_SC";
-  margin-left: 8px;
+  margin-left: 10px;
   font-size: 30px;
+  cursor: pointer;
 }
 .menuContainer {
   display: inline-flex;
   align-items: center;
-  margin-right: 250px;
+  margin-right: 13vw;
 }
 .menuContainer ul {
   list-style-type: none;

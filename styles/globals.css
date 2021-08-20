@@ -36,3 +36,10 @@ a {
   font-weight: 600;
   font-display: swap;
 }
+@font-face {
+  font-family: "Podkova";
+  src: url("/fonts/Podkova/Podkova-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

@@ -1,0 +1,49 @@
+.container {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+}
+
+.headRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.logoContainer {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.logoContainer .logo {
+}
+.logoContainer .vl {
+  border-left: 3px solid rgb(2, 31, 2);
+  height: 35px;
+  margin: 0 5px;
+}
+.logoContainer span {
+  font-family: "Cormorant_SC";
+  margin-left: 8px;
+  font-size: 25px;
+}
+.menuContainer {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 220px;
+}
+.menuContainer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menuContainer li {
+  display: inline;
+  padding: 0 2px;
+  margin: 0 20px;
+  font-family: "PT_Mono";
+  font-size: 20px;
+}
+.contentRow {
+}
+.footerRow {
+}

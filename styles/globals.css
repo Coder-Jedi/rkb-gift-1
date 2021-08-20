@@ -14,3 +14,25 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Cormorant_SC";
+  src: url("/fonts/Cormorant_SC/CormorantSC-SemiBold.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("/fonts/Cormorant/Cormorant-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT_Mono";
+  src: url("/fonts/PT_Mono/PTMono-Regular.ttf");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}

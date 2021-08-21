@@ -5,8 +5,11 @@ import Head from "next/head";
 import Link from "next/link";
 import { SvgIcon } from "@material-ui/core";
 import React from "react";
+import { useRouter } from "next/dist/client/router";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+
   return (
     <div className={styles.outerContainer}>
       <div className={styles.innerContainer}>
@@ -33,18 +36,26 @@ export default function Layout({ children }) {
             </Link>
             <div className={styles.vl}></div>
             <Link href="/">
-              <span>Danielasman</span>
+              <span>Dhanashee</span>
             </Link>
           </div>
           <div className={styles.menuContainer}>
             <ul>
-              <li>
+              <li className={router.pathname === "/about" ? styles.active : ""}>
                 <Link href="/about">About</Link>
               </li>
-              <li>
+              <li
+                className={
+                  router.pathname.startsWith("/blog") ? styles.active : ""
+                }
+              >
                 <Link href="/blog">Blog</Link>
               </li>
-              <li>Contact</li>
+              <li
+                className={router.pathname === "/contact" ? styles.active : ""}
+              >
+                Contact
+              </li>
             </ul>
           </div>
         </div>

@@ -51,10 +51,13 @@
 }
 .menuContainer li {
   display: inline;
-  padding: 0 2px;
+  padding: 0 2px 8px 2px;
   margin: 0 20px;
   font-family: "PT_Mono";
   font-size: 21px;
+}
+.active {
+  border-bottom: 3px solid red;
 }
 .contentRow {
 }

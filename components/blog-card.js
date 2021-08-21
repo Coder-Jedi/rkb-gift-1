@@ -11,8 +11,11 @@ export default function BlogCard(props) {
 
   //convert the htmlContent to plain text to show in BlogCard as summary
   const rawContent = htmlToText(post.content, { wordwrap: 250 });
+  let content;
 
-  const content = rawContent.trim().slice(0, 200);
+  if (rawContent.length > 165) {
+    content = `${rawContent.trim().slice(0, 160)}....`;
+  } else content = rawContent;
 
   return (
     <>

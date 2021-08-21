@@ -8,8 +8,8 @@
   justify-content: center;
 }
 .imageContainer .image {
-  height: 120px;
-  width: 120px;
+  height: 125px;
+  width: 125px;
 }
 .outerBlogContainer {
   display: flex;

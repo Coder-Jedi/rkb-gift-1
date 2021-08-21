@@ -1,44 +1,32 @@
 import styles from "../styles/about.module.css";
 import Layout from "../components/layout";
-import { getPostsFirebase, postPostsFirebase } from "../lib/firebaseApi";
-import { useEffect, useState } from "react";
+import SocialContainer from "../components/social-container";
+import Image from "next/image";
 
 export default function About() {
-  let [data, setData] = useState({});
-
-  useEffect(() => {
-    // Update the document title using the browser API
-    getPostsFirebase().then((d) => setData(d));
-  }, []);
-
-  // async function onClickGet() {
-
-  // }
-
   return (
     <Layout>
-      <div>This is the About Page!</div>
-      {/* <button onClick={postPostsFirebase}>Post</button>
-      <button onClick={onClickGet}>Get</button> */}
-
-      {/* {Object.entries(data).map(([key, value]) => {
-        console.log("key: ", key, " value: ", value);
-      })} */}
-
-      {/* {Object.values(data).map((e) => {
-        console.log(e);
-        return (
-          <div key={e.title}>
-            {e.title}
-            <br />
-            {e.date}
-            <br />
-            <p dangerouslySetInnerHTML={{ __html: e.content }}></p>
-            <br />
-            <br />
+      <div className={styles.mainContainer}>
+        <div className={styles.imageContainer}>
+          <div className={styles.image}>
+            <Image
+              width={288}
+              height={431}
+              src="/images/profile_image.jpeg"
+              alt=""
+            />
           </div>
-        );
-      })} */}
+        </div>
+        <div className={styles.aboutContainer}>
+          <p style={{ textAlign: "center" }}>
+            Hi! This is Dhanashree. I'm a medical student currently in my 3rd
+            year. I love to play basketball!
+          </p>
+        </div>
+        <div className={styles.footerContainer}>
+          <SocialContainer />
+        </div>
+      </div>
     </Layout>
   );
 }

@@ -36,7 +36,7 @@ export default function Layout({ children }) {
             </Link>
             <div className={styles.vl}></div>
             <Link href="/" passHref={true}>
-              <span>Dhanashee</span>
+              <span>Dhanashree</span>
             </Link>
           </div>
           <div className={styles.menuContainer}>

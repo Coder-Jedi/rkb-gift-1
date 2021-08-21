@@ -1,0 +1,8 @@
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  width: 270px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border: 3px solid #f0f0f0;
+}

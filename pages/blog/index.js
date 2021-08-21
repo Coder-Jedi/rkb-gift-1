@@ -14,6 +14,7 @@ export default function Blog() {
   return (
     <Layout>
       <Head>
+        <title>Blog | Dhanashree</title>
         <link
           rel="preload"
           href="/fonts/PT_Mono/PTMono-Regular.ttf"

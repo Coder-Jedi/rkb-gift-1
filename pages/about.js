@@ -2,10 +2,14 @@ import styles from "../styles/about.module.css";
 import Layout from "../components/layout";
 import SocialContainer from "../components/social-container";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function About() {
   return (
     <Layout>
+      <Head>
+        <title>About | Dhanashree</title>
+      </Head>
       <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>

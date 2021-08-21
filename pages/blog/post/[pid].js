@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Layout from "../../../components/layout";
 import SocialContainer from "../../../components/social-container";
 import styles from "./post.module.css";
-
+import Head from "next/head";
 import { PostsContext } from "../../../lib/context";
 import { useContext } from "react";
 import getDateString from "../../../lib/date-utils";
@@ -21,6 +21,9 @@ export default function Post() {
   if (!post) {
     return (
       <Layout>
+        <Head>
+          <title>Blog | Dhanashree</title>
+        </Head>
         <div
           style={{
             display: "flex",
@@ -39,6 +42,9 @@ export default function Post() {
 
   return (
     <Layout>
+      <Head>
+        <title>Blog - {post.title}</title>
+      </Head>
       <div className={styles.mainContainer}>
         <div className={styles.imageContainer}>
           <div className={styles.image}>

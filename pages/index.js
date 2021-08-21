@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>My website</title>
+        <title>Home | Dhanashree</title>
         <link
           rel="preload"
           href="/fonts/Cormorant/Cormorant-Bold.ttf"

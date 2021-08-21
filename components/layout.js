@@ -4,6 +4,7 @@ import Logo from "../public/images/logo.svg";
 import Head from "next/head";
 import Link from "next/link";
 import { SvgIcon } from "@material-ui/core";
+import React from "react";
 
 export default function Layout({ children }) {
   return (

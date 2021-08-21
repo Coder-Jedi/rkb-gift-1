@@ -4,15 +4,13 @@ import styles from "./blog.module.css";
 import SocialContainer from "../../components/social-container";
 import { Avatar } from "@material-ui/core";
 import BlogCard from "../../components/blog-card";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getPostsFirebase } from "../../lib/firebaseApi";
 
-export default function Blog() {
-  let [posts, setPosts] = useState({});
+import { PostsContext } from "../../lib/context";
 
-  useEffect(() => {
-    getPostsFirebase().then((d) => setPosts(d));
-  }, []);
+export default function Blog() {
+  const [posts, setPosts] = useContext(PostsContext);
 
   return (
     <Layout>

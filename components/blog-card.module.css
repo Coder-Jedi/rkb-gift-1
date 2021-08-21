@@ -11,19 +11,23 @@
   background-color: white;
   font-family: monospace;
   padding: 10px 16px;
+  cursor: pointer;
 }
 .title {
   width: 100%;
   font-size: 18px;
   font-weight: 600;
+  cursor: unset;
 }
 .date {
   width: 100%;
   font-size: 16px;
   margin-top: 5px;
+  cursor: unset;
 }
 .content {
   width: 100%;
   font-size: 15px;
   margin-top: 10px;
+  cursor: unset;
 }

@@ -4,8 +4,7 @@ import styles from "./blog.module.css";
 import SocialContainer from "../../components/social-container";
 import { Avatar } from "@material-ui/core";
 import BlogCard from "../../components/blog-card";
-import { useContext, useEffect, useState } from "react";
-import { getPostsFirebase } from "../../lib/firebaseApi";
+import { useContext } from "react";
 
 import { PostsContext } from "../../lib/context";
 
@@ -37,7 +36,7 @@ export default function Blog() {
             <BlogCard post={post} key={post.id} />
           ))}
         </div>
-        <div className={styles.footerConatiner}>
+        <div className={styles.footerContainer}>
           <SocialContainer />
         </div>
       </div>

@@ -56,6 +56,7 @@ export default function Admin(props) {
     const content = document.getElementsByClassName("sun-editor-editable")[0]
       .innerHTML;
     postPostsFirebase(title, content);
+    alert("The post has been saved!");
   }
 
   return (

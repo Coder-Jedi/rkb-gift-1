@@ -1,0 +1,50 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imageContainer {
+  display: inline-flex;
+  justify-content: center;
+}
+.imageContainer .image {
+  height: 120px;
+  width: 120px;
+}
+.outerBlogContainer {
+  display: flex;
+  justify-content: center;
+}
+.innerBlogContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+  margin-top: 20px;
+  width: 600px;
+}
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  width: 100%;
+  line-height: 1.4;
+}
+.date {
+  font-size: 18px;
+  font-weight: 500;
+  color: gray;
+  width: 100%;
+  margin-top: 25px;
+}
+.content {
+  width: 100%;
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10vh;
+  margin-bottom: 25px;
+}

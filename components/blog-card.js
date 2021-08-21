@@ -1,3 +1,4 @@
+import { PagesSharp } from "@material-ui/icons";
 import { htmlToText } from "html-to-text";
 import Link from "next/link";
 import getDateString from "../lib/date-utils";
@@ -19,7 +20,7 @@ export default function BlogCard(props) {
 
   return (
     <>
-      <Link href={`/blog/post/${post.id}`}>
+      <Link href={`/blog/post/${post.id}`} passHref={true}>
         <div className={styles.outerContainer}>
           <div className={styles.innerContainer}>
             <div className={styles.title}>

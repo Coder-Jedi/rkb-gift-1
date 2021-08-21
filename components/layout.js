@@ -29,13 +29,13 @@ export default function Layout({ children }) {
         </Head>
         <div className={styles.headRow}>
           <div className={styles.logoContainer}>
-            <Link href="/">
+            <Link href="/" passHref={true}>
               <div className={styles.logo}>
                 <SvgIcon component={Logo} style={{ fontSize: "6rem" }} />
               </div>
             </Link>
             <div className={styles.vl}></div>
-            <Link href="/">
+            <Link href="/" passHref={true}>
               <span>Dhanashee</span>
             </Link>
           </div>

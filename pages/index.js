@@ -32,9 +32,9 @@ export default function Home() {
       <div className={styles.contentContainer}>
         <div className={styles.imageContainer}>
           <Image
-            width={288}
-            height={431}
-            src="/images/profile_image.jpeg"
+            width={405}
+            height={540}
+            src="/images/profile_image.jpg"
             alt=""
           />
         </div>

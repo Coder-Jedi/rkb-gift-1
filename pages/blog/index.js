@@ -26,7 +26,7 @@ export default function Blog() {
         <div className={styles.imageContainer}>
           <div className={styles.image}>
             <Avatar
-              src="/images/profile_image.jpeg"
+              src="/images/profile_image.jpg"
               alt=""
               style={{ height: "100%", width: "100%" }}
             />

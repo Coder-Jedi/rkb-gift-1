@@ -14,9 +14,9 @@ export default function About() {
         <div className={styles.imageContainer}>
           <div className={styles.image}>
             <Image
-              width={288}
-              height={431}
-              src="/images/profile_image.jpeg"
+              width={411}
+              height={548}
+              src="/images/profile_image.jpg"
               alt=""
             />
           </div>

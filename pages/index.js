@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import SocialContainer from "../components/social-container";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -54,10 +55,18 @@ export default function Home() {
             <p>
               Neurosurgery is an art and every neurosurgeon is an artist. I am
               an aspiring medical student who one day wants to be that artist! I
-              want to make it my destiny to master brain: "the organ of
-              destiny".
+              want to make it my destiny to{" "}
+              <b>master brain: "the organ of destiny"</b>.
             </p>
-            <p>Check out my blog for my latest posts.</p>
+            <p>
+              Check out{" "}
+              <Link href="/blog" passHref={true}>
+                <span style={{ color: "chocolate", cursor: "pointer" }}>
+                  my blog
+                </span>
+              </Link>{" "}
+              for my latest posts.
+            </p>
           </div>
         </div>
       </div>

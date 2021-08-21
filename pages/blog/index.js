@@ -35,9 +35,9 @@ export default function Blog() {
           </div>
         </div>
         <div className={styles.blogContainer}>
-          {Object.entries(posts).map(([key, value]) => {
-            return <BlogCard post={value} key={key} />;
-          })}
+          {posts.map((post) => (
+            <BlogCard post={post} key={post.id} />
+          ))}
         </div>
         <div className={styles.footerConatiner}>
           <SocialContainer />

@@ -1,35 +1,18 @@
 import Layout from "../../components/layout";
 import Head from "next/dist/shared/lib/head";
-import { getSortedPostsData } from "../../lib/posts";
 import styles from "./blog.module.css";
 import SocialContainer from "../../components/social-container";
 import { Avatar } from "@material-ui/core";
 import BlogCard from "../../components/blog-card";
+import { useEffect, useState } from "react";
+import { getPostsFirebase } from "../../lib/firebaseApi";
 
-export default function Blog({ allPostsData }) {
-  // const posts = [
-  //   {
-  //     id: "pre-rendering",
-  //     title: "Two Forms of Pre-rendering",
-  //     date: "01-Jan-2020",
-  //     content:
-  //       "Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** ...",
-  //   },
-  //   {
-  //     id: "ssg-ssr",
-  //     title: "When to Use Static Generation v.s. Server-side Rendering",
-  //     date: "10-Dec-2019",
-  //     content:
-  //       "We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and .....",
-  //   },
-  // ];
-  const posts = allPostsData.map((post) => {
-    return {
-      ...post,
-      content:
-        "Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** ...",
-    };
-  });
+export default function Blog() {
+  let [posts, setPosts] = useState({});
+
+  useEffect(() => {
+    getPostsFirebase().then((d) => setPosts(d));
+  }, []);
 
   return (
     <Layout>
@@ -52,8 +35,8 @@ export default function Blog({ allPostsData }) {
           </div>
         </div>
         <div className={styles.blogContainer}>
-          {posts.map((post) => {
-            return <BlogCard post={post} key={post.id} />;
+          {Object.entries(posts).map(([key, value]) => {
+            return <BlogCard post={value} key={key} />;
           })}
         </div>
         <div className={styles.footerConatiner}>
@@ -62,13 +45,4 @@ export default function Blog({ allPostsData }) {
       </div>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  console.log(allPostsData);
-
-  return {
-    props: { allPostsData },
-  };
 }

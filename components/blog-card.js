@@ -1,7 +1,10 @@
+import { htmlToText } from "html-to-text";
 import styles from "./blog-card.module.css";
 
 export default function BlogCard(props) {
   const { post } = props;
+
+  const content = htmlToText(post.content, { wordwrap: 130 });
 
   return (
     <>
@@ -14,7 +17,7 @@ export default function BlogCard(props) {
             <span>{post.date}</span>
           </div>
           <div className={styles.content}>
-            <span>{post.content}</span>
+            <span>{content}</span>
           </div>
         </div>
       </div>

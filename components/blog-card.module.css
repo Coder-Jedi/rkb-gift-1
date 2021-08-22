@@ -31,3 +31,9 @@
   margin-top: 10px;
   cursor: unset;
 }
+
+@media screen and (max-width: 652px) {
+  .outerContainer {
+    width: 95vw;
+  }
+}

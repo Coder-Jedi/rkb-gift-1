@@ -4,9 +4,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
+  padding: 60px 10px 0px 10px;
 }
 .imageContainer {
+  display: flex;
+  justify-content: center;
   margin-right: 40px;
 }
 .vl {
@@ -33,6 +35,28 @@
   border-radius: 12px / 125px;
   box-shadow: 0 0 8px black;
 }
+
+.hl {
+  display: none;
+  margin-top: 30px;
+  width: 84vw;
+  position: relative;
+}
+
+.hl .hlmask {
+  overflow: hidden;
+  height: 20px;
+}
+.hl .hlmask:after {
+  content: "";
+  display: block;
+  margin: -25px auto 0;
+  width: 100%;
+  height: 25px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 8px black;
+}
+
 /* &.right .mask:before { 
       content:''; 
       display:block; margin-left:20px;
@@ -50,19 +74,19 @@
 }
 .descriptionContainer .the {
   margin-right: 25px;
+  font-size: 37px;
 }
 .descriptionContainer .the span {
   font-family: "Cormorant";
-  font-size: 37px;
 }
 .descriptionContainer .gooddoctor {
   display: flex;
   flex-direction: column;
   margin-top: 3px;
+  font-size: 38px;
 }
 .descriptionContainer .gooddoctor span {
   font-family: "PT_Mono";
-  font-size: 38px;
 }
 .descriptionContainer .content {
   font-family: "Podkova";
@@ -84,4 +108,100 @@
   justify-content: space-between;
   padding: 5px 10px;
   border: 3px solid #f0f0f0;
+}
+
+/* ............Media Queries for responsiveness........... */
+
+@media screen and (max-width: 1025px) {
+  .imageContainer {
+    width: 36vw;
+  }
+}
+@media screen and (max-width: 901px) {
+  .imageContainer {
+    margin-right: 0px;
+    width: 38vw;
+  }
+  .vl {
+    margin: 0 10px;
+  }
+  .descriptionContainer {
+    margin-left: 0px;
+  }
+  .contentContainer {
+    justify-content: space-around;
+  }
+  .descriptionContainer .content {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 812px) {
+  .imageContainer {
+    width: 44vw;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .contentContainer {
+    align-items: flex-start;
+  }
+  .descriptionContainer .content {
+    font-size: 19px;
+  }
+  .vl .vlmask {
+    height: 320px;
+  }
+  .descriptionContainer .the {
+    margin-right: 21px;
+    font-size: 35px;
+  }
+  .descriptionContainer .gooddoctor {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .imageContainer {
+    width: 50vw;
+  }
+}
+
+@media screen and (max-width: 712px) {
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .imageContainer {
+    width: 84vw;
+  }
+  .vl {
+    display: none;
+  }
+  .hl {
+    display: block;
+  }
+  .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionContainer .content {
+    text-align: center;
+  }
+  .contentContainer {
+    padding: 20px 10px 0px 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .descriptionContainer .content {
+    font-size: 17px;
+  }
+  .descriptionContainer .the {
+    font-size: 31px;
+  }
+  .descriptionContainer .gooddoctor {
+    font-size: 32px;
+  }
 }

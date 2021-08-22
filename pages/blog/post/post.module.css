@@ -48,3 +48,9 @@
   margin-top: 10vh;
   margin-bottom: 25px;
 }
+
+@media screen and (max-width: 670px) {
+  .innerBlogContainer {
+    width: 90vw;
+  }
+}

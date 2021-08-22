@@ -41,6 +41,9 @@ export default function Home() {
         <div className={styles.vl}>
           <div className={styles.vlmask}></div>
         </div>
+        <div className={styles.hl}>
+          <div className={styles.hlmask}></div>
+        </div>
         <div className={styles.descriptionContainer}>
           <div className={styles.title}>
             <div className={styles.the}>

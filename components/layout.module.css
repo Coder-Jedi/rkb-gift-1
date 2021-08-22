@@ -13,7 +13,9 @@
   height: 100%;
   overflow: auto;
 }
-
+.mask {
+  display: none;
+}
 .headRow {
   display: flex;
   justify-content: space-between;
@@ -27,6 +29,7 @@
 .logoContainer .logo {
   cursor: pointer;
   margin-right: 2px;
+  font-size: 6rem;
 }
 .logoContainer .vl {
   border-left: 3px solid rgb(2, 31, 2);
@@ -39,10 +42,17 @@
   font-size: 30px;
   cursor: pointer;
 }
+.outerMenuContainer {
+  display: flex;
+  align-items: center;
+}
 .menuContainer {
   display: inline-flex;
   align-items: center;
   margin-right: 13vw;
+}
+.menuBack {
+  display: none;
 }
 .menuContainer ul {
   list-style-type: none;
@@ -56,8 +66,132 @@
   font-family: "PT_Mono";
   font-size: 21px;
 }
+.toggleButton {
+  font-size: 40px;
+  margin-right: 35px;
+  display: none;
+}
 .active {
   border-bottom: 3px solid red;
 }
 .contentRow {
+}
+.activeMenu {
+}
+.inactiveMenu {
+}
+
+@media screen and (max-width: 1025px) {
+  .logoContainer {
+    margin-left: 5vw;
+  }
+  .menuContainer {
+    margin-right: 7vw;
+  }
+}
+
+@media screen and (max-width: 901px) {
+  .outerContainer {
+    padding: 18px;
+  }
+  .logoContainer {
+    margin-left: 4vw;
+  }
+  .menuContainer {
+    margin-right: 2vw;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .logoContainer {
+    margin-left: 3vw;
+  }
+  .menuContainer {
+    margin-right: 1vw;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .logoContainer {
+    margin-left: 3vw;
+  }
+  .toggleButton {
+    font-size: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .menuContainer {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: #f2dada;
+  }
+  .menuBack {
+    grid-row: auto;
+    display: inline-block;
+  }
+  .menuContainer li {
+    display: block;
+  }
+
+  .outerMenuContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+  }
+  .activeMenu {
+    transform: translate3d(0vw, 0, 0);
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  }
+  .inactiveMenu {
+    transform: translate3d(100vw, 0, 0);
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+  }
+  .mask {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .outerContainer {
+    padding: 10px;
+  }
+  .logoContainer .logo {
+    font-size: 4.5rem;
+    margin: 0;
+  }
+  .logoContainer span {
+    font-size: 28px;
+    margin-left: 6px;
+  }
+  .toggleButton {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .outerContainer {
+    padding: 6px;
+  }
+  .logoContainer .logo {
+    font-size: 4rem;
+  }
+  .logoContainer .vl {
+    height: 33px;
+  }
+  .logoContainer span {
+    font-size: 25px;
+    margin-left: 5px;
+  }
+  .toggleButton {
+    margin-right: 6px;
+  }
 }

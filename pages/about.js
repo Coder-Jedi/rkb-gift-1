@@ -23,7 +23,7 @@ export default function About() {
         </div>
         <div className={styles.aboutContainer}>
           <p style={{ textAlign: "center" }}>
-            Hi! This is Dhanashree. I'm a medical student currently in my 3rd
+            Hi! This is Dhanashree. I'm a medical student currently in my 2nd
             year. I love to play basketball!
           </p>
         </div>

@@ -7,6 +7,11 @@
   display: inline-flex;
   justify-content: center;
 }
+.backArrow {
+  position: relative;
+  left: -266px;
+  top: 32px;
+}
 .imageContainer .image {
   height: 125px;
   width: 125px;
@@ -53,16 +58,27 @@
   .innerBlogContainer {
     width: 90vw;
   }
+  .backArrow {
+    position: absolute;
+    left: 7vw;
+    top: 155px;
+  }
 }
 
 @media screen and (max-width: 530px) {
   .content {
     font-size: 17px;
   }
+  .backArrow {
+    top: 121px;
+  }
 }
 
 @media screen and (max-width: 390px) {
   .content {
     font-size: 16px;
+  }
+  .backArrow {
+    top: 105px;
   }
 }

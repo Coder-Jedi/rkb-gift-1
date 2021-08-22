@@ -7,6 +7,8 @@ import Head from "next/head";
 import { PostsContext } from "../../../lib/context";
 import { useContext } from "react";
 import getDateString from "../../../lib/date-utils";
+import { ArrowBack } from "@material-ui/icons";
+import Link from "next/link";
 
 export default function Post() {
   const router = useRouter();
@@ -46,6 +48,12 @@ export default function Post() {
         <title>Blog - {post.title}</title>
       </Head>
       <div className={styles.mainContainer}>
+        <Link href="/blog" passHref={true}>
+          <ArrowBack
+            className={styles.backArrow}
+            style={{ fontSize: "1.7rem" }}
+          />
+        </Link>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
             <Avatar

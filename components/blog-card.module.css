@@ -34,6 +34,12 @@
 
 @media screen and (max-width: 652px) {
   .outerContainer {
-    width: 95vw;
+    width: 93vw;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .outerContainer {
+    width: 94vw;
   }
 }

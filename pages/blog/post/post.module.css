@@ -54,3 +54,15 @@
     width: 90vw;
   }
 }
+
+@media screen and (max-width: 530px) {
+  .content {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .content {
+    font-size: 16px;
+  }
+}

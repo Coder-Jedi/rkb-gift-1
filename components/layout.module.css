@@ -37,7 +37,7 @@
   margin: 0 5px;
 }
 .logoContainer span {
-  font-family: "Cormorant_SC";
+  font-family: 'Cormorant_SC';
   margin-left: 10px;
   font-size: 30px;
   cursor: pointer;
@@ -63,8 +63,10 @@
   display: inline;
   padding: 0 2px 8px 2px;
   margin: 0 20px;
-  font-family: "PT_Mono";
+  font-family: 'PT_Mono';
   font-size: 21px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .toggleButton {
   font-size: 40px;

@@ -11,6 +11,7 @@
   position: relative;
   left: -266px;
   top: 32px;
+  cursor: pointer;
 }
 .imageContainer .image {
   height: 125px;
